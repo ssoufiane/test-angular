@@ -1,0 +1,51 @@
+<div class="container spacer col-md-6 col-sm-12 col-xs-12">
+  <div class="panel panel-primary">
+    <div class="panel-heading">New Person</div>
+    <div class="panel-body">
+      <form (ngSubmit)="saveForm()">
+        <div class="form-group">
+          <label>ID:</label>
+          <input type="number" name="id" class="form-control" [(ngModel)]="person.id">
+        </div>
+        <div class="form-group">
+          <label>Nom:</label>
+          <input type="text" name="nom" class="form-control" [(ngModel)]="person.nom">
+        </div>
+        <div class="form-group">
+          <label>Prenom:</label>
+          <input type="text" name="prenom" class="form-control" [(ngModel)]="person.prenom">
+        </div>
+        <button type="submit" class="btn btn-success">Valider</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<!--
+<div class="container">
+<div class="panel panel-primary">
+  <div class="panel-heading">New Person</div>
+  <div class="panel-body">
+  <form  (ngSubmit)="saveForm()">
+    <div class="form-group">
+      <label>ID:</label>
+      <input class="form-control" name="id" type="id" [(ngModel)]="person.id">
+    </div>
+
+    <div class="form-group">
+      <label>NOM</label>
+      <input class="form-control" name="nom" type="text" [(ngModel)]="person.nom">
+    </div>
+
+    <div class="form-group">
+      <label>Prénom:</label>
+      <input class="form-control"name="prenom" type="text" [(ngModel)]="person.prenom">
+    </div>
+    <button type="submit"  class="btn btn-success">valider</button>
+    </form>
+  </div>
+  </div>
+
+</div>
+-->

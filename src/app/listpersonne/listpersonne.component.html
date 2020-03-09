@@ -1,0 +1,30 @@
+<div class="container spacer col-md-6 col-sm-12 col-xs-12">
+  <div class="panel panel-primary">
+    <div class="panel-heading ">Liste des personnes</div>
+    <div class="panel-body">
+
+      <div class="form-group " >
+        <label>Mot Clé:</label>
+        <input type="text" class="form-control" [(ngModel)]="motCle">
+        <button class="btn btn-primary clas1" (click)="chercher()">chercher</button>
+      </div>
+      <table class="table  table-striped" *ngIf="persons">
+        <tr>
+          <th>ID</th>
+          <th>Nom</th>
+          <th>Prenom</th>
+        </tr>
+        <tr *ngFor="let p of persons">
+          <td>{{p.id}}</td>
+          <td>{{p.nom}}</td>
+          <td>{{p.prenom}}</td>
+          <td>
+            <button class="btn btn-primary clas1" (click)="showPerson(p)"> Modifier</button>
+            <button class="btn btn-danger clas1" (click)="deletePersonn(p)"> Supprimer</button>
+          </td>
+        </tr>
+      </table>
+      <button class="btn btn-primary" (click)="addPersonne()"> Ajouter une personne</button>
+    </div>
+    <div>
+    </div>
